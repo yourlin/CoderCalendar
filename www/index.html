@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>码农老黄历</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="starter">
+
+<ion-pane>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">码农老黄历</h1>
+    </ion-header-bar>
+    <ion-content ng-controller="CalendarController">
+        <div class="date">{{getTodayString()}}</div>
+        <div class="good">
+            <h1>宜</h1>
+            <ul>
+                <li ng-repeat="item in goodList">
+                    <h2>{{item.title}}</h2>
+                    <div>{{item.description}}</div>
+                </li>
+            </ul>
+        </div>
+        <div class="bad">
+            <h1>忌</h1>
+            <ul>
+                <li ng-repeat="item in badList">
+                    <h2>{{item.title}}</h2>
+                    <div>{{item.description}}</div>
+                </li>
+            </ul>
+        </div>
+        <ul class="addition">
+            <li><strong>座位朝向：</strong>面向<span class="direction-value">{{direction}}</span>写程序，BUG 最少。</li>
+            <li><strong>今日宜饮：</strong><span class="drink-value">{{drinks}}</span></li>
+            <li><strong>艳遇指数：</strong><span class="encounter-value">{{encounter}}</span></li>
+        </ul>
+    </ion-content>
+</ion-pane>
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+  font-family: "Consolas", "Microsoft Yahei", Arial, sans-serif;
+  font-size: 10px;
+}
+
+$h-width: 100px;
+$h-height: 200px;
+
+.title {
+  font-size: 3.0rem;
+}
+
+.date {
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.good, .bad {
+  overflow: hidden;
+  > h1 {
+    display: inline-block;
+    width: $h-width;
+    height: $h-height;
+    line-height: $h-height;
+    margin: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    float: left;
+  }
+
+  > ul {
+    display: block;
+    height: $h-height;
+    margin-left: $h-width;
+    > li {
+      height: 50px;
+      > h2 {
+        margin: 0;
+        color: #444;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      > div {
+        margin-bottom: 10px;
+        line-height: 110%;
+        font-size: .8rem;
+        color: #777;
+      }
+    }
+  }
+}
+
+.good {
+  > h1 {
+    background: #ffee44;
+  }
+
+  > ul {
+    background: #ffffaa;
+  }
+
+}
+
+.bad {
+  > h1 {
+    background: #ff4444;
+  }
+
+  > ul {
+    background: #ffddd3;
+  }
+}
+
+.addition {
+  font-size: 1.1rem;
+
+  >li{
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .direction-value{
+    font-weight: bold;
+  }
+
+  .drink-value{
+
+  }
+  .encounter-value {
+    color: #ff3c5f;
+    font-size: 1.4rem;
+  }
+}
